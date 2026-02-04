@@ -6,5 +6,5 @@ Allow: /
 Disallow: /private/
 Disallow: /drafts/
 
-# Link to your sitemap (Update with your actual domain)
-Sitemap: https://www.qur8.in/sitemap.xml
+# Link to your sitemap
+Sitemap: https://www.turiyaalabs.com/sitemap.xml

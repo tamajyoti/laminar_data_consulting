@@ -1,1 +1,1 @@
-# laminar_data_consulting
+# turiyaa_labs_consulting
