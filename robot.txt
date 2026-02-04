@@ -1,0 +1,10 @@
+# Allow all search engines to index the site
+User-agent: *
+Allow: /
+
+# Disallow specific private paths (if you add them later)
+Disallow: /private/
+Disallow: /drafts/
+
+# Link to your sitemap (Update with your actual domain)
+Sitemap: https://www.qur8.in/sitemap.xml
