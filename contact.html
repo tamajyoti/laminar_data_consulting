@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Up a Free Consult</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <nav class="p-6 flex justify-between items-center bg-white shadow-sm sticky top-0 z-50">
+        <div class="text-2xl font-bold text-slate-900 tracking-tight">
+            <span class="text-blue-600">Laminar</span>
+        </div>
+        <div class="hidden md:flex space-x-8 font-medium items-center">
+            <a href="index.html" class="hover:text-blue-600 text-slate-600">Home</a>
+            <a href="services.html" class="hover:text-blue-600 text-slate-600">Services</a>
+            <a href="case-studies.html" class="hover:text-blue-600 text-slate-600">Case Studies</a>
+            <a href="about.html" class="hover:text-blue-600 text-slate-600">About</a>
+            <a href="contact.html" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition shadow-md">Set Up a Free Consult</a>
+        </div>
+    </nav>
+
+    <section class="py-16 px-6 max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-stretch mb-16">
+            
+            <div class="space-y-8">
+                <div>
+                    <h1 class="text-4xl font-extrabold mb-4 text-slate-900">Let’s talk.</h1>
+                    <p class="text-lg text-slate-600">
+                        Provide a few details to help me prepare for our call, or simply scroll down to book directly.
+                    </p>
+                </div>
+
+                <form class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <input type="text" id="name_input" placeholder="First Name" class="w-full p-3 border rounded-lg outline-none focus:ring-2 focus:ring-blue-600">
+                        <input type="email" id="email_input" placeholder="Work Email" class="w-full p-3 border rounded-lg outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+                    <select id="focus_input" class="w-full p-3 border rounded-lg outline-none bg-white text-slate-600">
+                        <option>Focus: Modeling & Automation</option>
+                        <option>Focus: Data Infrastructure</option>
+                        <option>Focus: AI/ML Implementation</option>
+                        <option>Focus: Cost Optimization</option>
+                    </select>
+                    <textarea id="desc_input" placeholder="Briefly describe your current data mess..." class="w-full p-3 border rounded-lg outline-none h-24"></textarea>
+                    
+                    <button type="button" onclick="syncAndScroll()" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-100">
+                        Apply Details & Book Below ↓
+                    </button>
+                </form>
+            </div>
+
+            <div class="bg-slate-900 p-10 rounded-3xl text-white flex flex-col justify-center relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-8 opacity-10">
+                    <svg width="200" height="200" viewBox="0 0 24 24" fill="white"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <h2 class="text-2xl font-bold mb-8">Why this consult matters:</h2>
+                <ul class="space-y-8 relative z-10">
+                    <li class="flex items-start gap-4">
+                        <div class="bg-blue-600 p-2 rounded-lg mt-1">✓</div>
+                        <div>
+                            <p class="font-bold text-lg text-blue-400">Zero Proprietary Lock-in</p>
+                            <p class="text-slate-400 text-sm">We focus on open standards that your team can actually own.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="bg-blue-600 p-2 rounded-lg mt-1">✓</div>
+                        <div>
+                            <p class="font-bold text-lg text-blue-400">Architectural Rigor</p>
+                            <p class="text-slate-400 text-sm">Leverage patterns used to scale gaming and financial systems.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="bg-blue-600 p-2 rounded-lg mt-1">✓</div>
+                        <div>
+                            <p class="font-bold text-lg text-blue-400">Direct Expertise</p>
+                            <p class="text-slate-400 text-sm">Skip the account managers. Talk directly to the engineer.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="booking-area" class="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
+            <div id="calendly-target" class="calendly-inline-widget" 
+                 data-url="https://calendly.com/tamajyoti-dhar/30min?hide_landing_page_details=1&primary_color=2563eb" 
+                 style="min-width:320px;height:700px;">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function syncAndScroll() {
+            const name = document.getElementById('name_input').value;
+            const email = document.getElementById('email_input').value;
+            const desc = document.getElementById('desc_input').value;
+            const focus = document.getElementById('focus_input').value;
+
+            // Optional: If they provided info, refresh the widget to pre-fill
+            if(name || email) {
+                const target = document.getElementById('calendly-target');
+                target.innerHTML = '';
+                const baseUrl = "https://calendly.com/tamajyoti-dhar/30min";
+                // Prefilling Name, Email, and mapping the textarea to a1 (custom question 1)
+                const prefillUrl = `${baseUrl}?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&a1=${encodeURIComponent(focus + ": " + desc)}&hide_landing_page_details=1&primary_color=2563eb`;
+                
+                Calendly.initInlineWidget({
+                    url: prefillUrl,
+                    parentElement: target
+                });
+            }
+
+            // Smooth scroll to the calendar
+            document.getElementById('booking-area').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

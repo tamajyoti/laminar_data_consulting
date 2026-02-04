@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies | Laminar Consulting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50">
+    <nav class="p-6 flex justify-between items-center bg-white shadow-sm sticky top-0 z-50">
+        <div class="text-2xl font-bold text-slate-900 tracking-tight">
+            <span class="text-blue-600">Laminar</span>
+        </div>
+        <div class="hidden md:flex space-x-8 font-medium items-center">
+            <a href="index.html" class="hover:text-blue-600 text-slate-600">Home</a>
+            <a href="services.html" class="hover:text-blue-600 text-slate-600">Services</a>
+            <a href="case-studies.html" class="hover:text-blue-600 text-slate-600">Case Studies</a>
+            <a href="about.html" class="hover:text-blue-600 text-slate-600">About</a>
+            <a href="contact.html" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition shadow-md">Set Up a Free Consult</a>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto py-20 px-6">
+        <h1 class="text-4xl font-bold mb-16">Results Delivered.</h1>
+
+        <article class="bg-white rounded-3xl p-10 shadow-sm border mb-16">
+            <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">Gaming Tech</span>
+                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Lakehouse</span>
+            </div>
+            <h2 class="text-3xl font-bold mb-4">Scaling Real-Time Infrastructure at Drest</h2>
+            <p class="text-slate-600 mb-8 leading-relaxed">
+                The challenge involved scaling a data infrastructure to support high-frequency ingestion and complex analytics for a gaming startup. 
+                We implemented a Lakehouse architecture using Spark and Iceberg on S3, integrated Trino for dbt querying, and built Flink-based monitoring.
+            </p>
+            <div class="grid grid-cols-3 gap-4 border-t pt-8">
+                <div>
+                    <p class="text-2xl font-bold text-blue-600">15x</p>
+                    <p class="text-sm text-slate-500 uppercase">Capacity Growth</p>
+                </div>
+                <div>
+                    <p class="text-2xl font-bold text-blue-600">40%</p>
+                    <p class="text-sm text-slate-500 uppercase">Cost Reduction</p>
+                </div>
+                <div>
+                    <p class="text-2xl font-bold text-blue-600">99.9%</p>
+                    <p class="text-sm text-slate-500 uppercase">Reliability</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="bg-white rounded-3xl p-10 shadow-sm border">
+            <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">AdTech</span>
+                <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm">NLP & LLM</span>
+            </div>
+            <h2 class="text-3xl font-bold mb-4">Legacy Migration & Semantic Matching at Superside</h2>
+            <p class="text-slate-600 mb-8 leading-relaxed">
+                We overhauled the legacy stack to a Modern Data Stack (Snowflake + dbt) and built a semantic matching engine using Sentence-BERT and Faiss. 
+                Additionally, a sentiment analysis pipeline was integrated with Slack to proactively manage customer churn.
+            </p>
+            <div class="grid grid-cols-3 gap-4 border-t pt-8">
+                <div>
+                    <p class="text-2xl font-bold text-blue-600">70%</p>
+                    <p class="text-sm text-slate-500 uppercase">Query Speedup</p>
+                </div>
+                <div>
+                    <p class="text-2xl font-bold text-blue-600">60%</p>
+                    <p class="text-sm text-slate-500 uppercase">Time Saved (Manual Review)</p>
+                </div>
+                <div>
+                    <p class="text-2xl font-bold text-blue-600">18%</p>
+                    <p class="text-sm text-slate-500 uppercase">Churn Reduction</p>
+                </div>
+            </div>
+        </article>
+
+        <section class="py-20 bg-blue-600 text-white text-center rounded-3xl mx-6 mb-10">
+            <h2 class="text-3xl font-bold mb-4">Ready for similar results?</h2>
+            <p class="mb-8 opacity-90">Let's audit your current infrastructure and find your bottlenecks.</p>
+            <a href="contact.html" class="bg-white text-blue-600 px-10 py-4 rounded-xl font-bold hover:bg-slate-100 transition">
+                Start Your Audit
+            </a>
+        </section>
+    </main>
+</body>
+</html>
