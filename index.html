@@ -9,36 +9,50 @@
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans">
 
-    <nav class="p-6 flex justify-between items-center bg-white shadow-sm sticky top-0 z-50">
-        <div class="text-2xl font-bold text-slate-900 tracking-tight">
-            <span class="text-blue-600">Turiyaa</span> Labs
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-slate-900 tracking-tight">
+                <span class="text-blue-600">Turiyaa</span> Labs
+            </div>
+            <div class="hidden md:flex space-x-8 font-medium items-center">
+                <a href="/" class="hover:text-blue-600 text-slate-600">Home</a>
+                <a href="/services" class="hover:text-blue-600 text-slate-600">Services</a>
+                <a href="/case-studies" class="hover:text-blue-600 text-slate-600">Case Studies</a>
+                <a href="/about" class="hover:text-blue-600 text-slate-600">About</a>
+                <a href="/contact" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition shadow-md">Set Up a Free Consult</a>
+            </div>
+            <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden p-2 text-slate-700" aria-label="Toggle menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
         </div>
-        <div class="hidden md:flex space-x-8 font-medium items-center">
-            <a href="/" class="hover:text-blue-600 text-slate-600">Home</a>
-            <a href="/services" class="hover:text-blue-600 text-slate-600">Services</a>
-            <a href="/case-studies" class="hover:text-blue-600 text-slate-600">Case Studies</a>
-            <a href="/about" class="hover:text-blue-600 text-slate-600">About</a>
-            <a href="/contact" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition shadow-md">Set Up a Free Consult</a>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-3 font-medium border-t border-slate-100">
+            <a href="/" class="block py-2 text-slate-600 hover:text-blue-600">Home</a>
+            <a href="/services" class="block py-2 text-slate-600 hover:text-blue-600">Services</a>
+            <a href="/case-studies" class="block py-2 text-slate-600 hover:text-blue-600">Case Studies</a>
+            <a href="/about" class="block py-2 text-slate-600 hover:text-blue-600">About</a>
+            <a href="/contact" class="block bg-blue-600 text-white text-center px-5 py-2 rounded-lg hover:bg-blue-700 transition shadow-md">Set Up a Free Consult</a>
         </div>
     </nav>
 
-    <header class="py-24 px-6 max-w-6xl mx-auto text-center">
-        <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight text-slate-900">
+    <header class="py-16 sm:py-24 px-6 max-w-6xl mx-auto text-center">
+        <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight text-slate-900">
             We build the <span class="text-blue-600">data backbone</span> for high-growth startups.
         </h1>
         <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
             Scale your engineering, not your cloud bill. We audit, model, and automate your data infrastructure using open standards.
         </p>
-        <div class="flex justify-center gap-4">
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
             <a href="contact.html" class="bg-blue-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-blue-700 transition">Get a Free Data Audit</a>
             <a href="case-studies.html" class="border border-slate-300 px-8 py-3 rounded-md font-semibold hover:bg-slate-50 transition text-slate-700">Explore Case Studies</a>
         </div>
     </header>
 
-    <section class="bg-slate-900 py-24 px-6 text-white">
+    <section class="bg-slate-900 py-16 sm:py-24 px-6 text-white">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">A Different Approach to Consulting</h2>
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">A Different Approach to Consulting</h2>
                 <p class="text-slate-400 max-w-2xl mx-auto">We don't just build systems; we build sustainable engineering cultures.</p>
             </div>
 

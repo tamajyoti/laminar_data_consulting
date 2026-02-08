@@ -7,26 +7,40 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-50 text-slate-900">
-    <nav class="p-6 flex justify-between items-center bg-white shadow-sm sticky top-0 z-50">
-        <div class="text-2xl font-bold text-slate-900 tracking-tight">
-            <span class="text-blue-600">Turiyaa</span> Labs
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-slate-900 tracking-tight">
+                <span class="text-blue-600">Turiyaa</span> Labs
+            </div>
+            <div class="hidden md:flex space-x-8 font-medium items-center">
+                <a href="index.html" class="hover:text-blue-600 text-slate-600">Home</a>
+                <a href="services.html" class="hover:text-blue-600 text-slate-600">Services</a>
+                <a href="case-studies.html" class="hover:text-blue-600 text-slate-600">Case Studies</a>
+                <a href="about.html" class="hover:text-blue-600 text-slate-600">About</a>
+                <a href="contact.html" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition shadow-md">Set Up a Free Consult</a>
+            </div>
+            <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden p-2 text-slate-700" aria-label="Toggle menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
         </div>
-        <div class="hidden md:flex space-x-8 font-medium items-center">
-            <a href="index.html" class="hover:text-blue-600 text-slate-600">Home</a>
-            <a href="services.html" class="hover:text-blue-600 text-slate-600">Services</a>
-            <a href="case-studies.html" class="hover:text-blue-600 text-slate-600">Case Studies</a>
-            <a href="about.html" class="hover:text-blue-600 text-slate-600">About</a>
-            <a href="contact.html" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition shadow-md">Set Up a Free Consult</a>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-3 font-medium border-t border-slate-100">
+            <a href="index.html" class="block py-2 text-slate-600 hover:text-blue-600">Home</a>
+            <a href="services.html" class="block py-2 text-slate-600 hover:text-blue-600">Services</a>
+            <a href="case-studies.html" class="block py-2 text-slate-600 hover:text-blue-600">Case Studies</a>
+            <a href="about.html" class="block py-2 text-slate-600 hover:text-blue-600">About</a>
+            <a href="contact.html" class="block bg-blue-600 text-white text-center px-5 py-2 rounded-lg hover:bg-blue-700 transition shadow-md">Set Up a Free Consult</a>
         </div>
     </nav>
 
-    <section class="py-24 px-6 max-w-4xl mx-auto">
-        <h1 class="text-5xl font-extrabold mb-8">Engineering with <span class="text-blue-600">Intent</span>.</h1>
-        <p class="text-xl text-slate-700 leading-relaxed mb-6">
+    <section class="py-16 sm:py-24 px-6 max-w-4xl mx-auto">
+        <h1 class="text-3xl sm:text-5xl font-extrabold mb-8">Engineering with <span class="text-blue-600">Intent</span>.</h1>
+        <p class="text-lg sm:text-xl text-slate-700 leading-relaxed mb-6">
             Turiyaa Labs was founded by Tamajyoti Dhar, a Senior Data & ML Engineer with over a decade of experience in building high-stakes data systems. From managing millions of events per hour in gaming to detecting financial crime at global scale, we bring enterprise-grade engineering to high-growth startups.
         </p>
         
-        <div class="my-16 border-l-4 border-blue-600 pl-8 italic text-2xl text-slate-600">
+        <div class="my-12 sm:my-16 border-l-4 border-blue-600 pl-6 sm:pl-8 italic text-xl sm:text-2xl text-slate-600">
             "We believe that data infrastructure shouldn't just exist—it should accelerate your business."
         </div>
 
@@ -46,5 +60,11 @@
             </div>
         </div>
     </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm">
+        <div class="max-w-6xl mx-auto px-6">
+            <p>&copy; 2026 Turiyaa Labs. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
